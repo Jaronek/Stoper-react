@@ -1,0 +1,39 @@
+@import '../../styles/settings.scss';
+
+.button{
+    position: relative;
+    color: $color-warning;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 18px;
+    border-radius: 15%;
+    border: 1px solid $color-warning;
+    box-shadow: 0 0 20px 5px$color-warning, 0 0 30px $color-warning inset;
+    opacity: 0.8;
+    background-color: $color-dark;
+    text-shadow: 2px 2px 3px $color-light;
+    padding: 20px;
+    margin: 20px 40px 0 40px;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-color: $color-warning;
+        transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+        filter: blur(1em);
+    }
+    &:hover{
+        color: #000;
+        font-weight:700;
+        background-color: $color-warning;
+        text-shadow: 2px 2px 5px $color-light;
+        opacity: 1;
+        box-shadow: 0 0 30px 10px$color-warning;
+        &::before{
+            transform: perspective(0.75em) rotateX(40deg) scale(1, 0.35);
+        }
+    }
+}
